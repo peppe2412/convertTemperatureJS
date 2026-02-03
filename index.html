@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Convert Temperature</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="py-10 lg:container">
+      <h1 class="text-center lg:p-0 md:p-0 p-2 lg:text-5xl md:text-3xl text-xl">
+        Convertitore di temperatura (C° F°)
+      </h1>
+      <section class="flex justify-center mt-16 lg:p-0 md:p-0 p-5">
+        <div
+          class="border border-lg border-black rounded-lg lg:p-[50px] md:p-[40px] p-[20px] gap-5 flex lg:flex-row flex-col"
+        >
+          <div class="border border-3 border-gray-400 p-7 rounded-lg">
+            <input id="inputFirst" class="input input-xl input-neutral" />
+            <div>
+              <span id="gradeToggleFirst" class="text-sm"> Celsius </span>
+            </div>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <span
+              id="switchGrade"
+              class="btn btn-neutral btn-circle btn-outline"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5 lg:inline hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.5 21 3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"
+                />
+              </svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-5 lg:hidden"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+                />
+              </svg>
+            </span>
+          </div>
+          <div class="border border-3 border-gray-400 p-7 rounded-lg">
+            <input id="inputSecond" class="input input-xl input-neutral" />
+            <div>
+              <span id="gradeToggleSecond" class="text-sm"> Fahrenheit </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
