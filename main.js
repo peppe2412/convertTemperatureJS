@@ -41,3 +41,10 @@ inputFirst.addEventListener("input", convertTemperature);
 switchGrade.addEventListener("click", () => {
   switchGradeToggle();
 });
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Tab") {
+    e.preventDefault();
+    switchGradeToggle();
+  }
+});
