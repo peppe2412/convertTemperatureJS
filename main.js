@@ -1,3 +1,9 @@
+
+/*
+  ==============
+  HTML ELEMENTS
+  ==============
+*/
 const inputFirst = document.querySelector("#inputFirst");
 const inputSecond = document.querySelector("#inputSecond");
 const gradeToggleFirst = document.querySelector("#gradeToggleFirst");
@@ -8,6 +14,10 @@ const switchGrade = document.querySelector("#switchGrade");
 
 let isCelsius = true;
 
+/*
+  Funzione che converte i gradi della temperatura inserita,
+  in base al grado 
+*/
 function convertTemperature() {
   const value = inputFirst.value;
 
@@ -22,6 +32,9 @@ function convertTemperature() {
   }
 }
 
+/*
+  Funzione per permettere di cambiare grado da convertire
+*/
 function switchGradeToggle() {
   if (isCelsius) {
     gradeToggleFirst.textContent = "Fahrenheit";
@@ -35,6 +48,13 @@ function switchGradeToggle() {
 
   isCelsius = !isCelsius;
 }
+
+
+/*
+  ===========
+  EVENTS DOM
+  ===========
+*/
 
 inputFirst.addEventListener("input", convertTemperature);
 
